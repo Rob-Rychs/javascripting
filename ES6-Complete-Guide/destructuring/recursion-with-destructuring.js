@@ -8,7 +8,7 @@
 
 // double ([1,2,3])
 
-Out//  put
+//Out  put
 
 // [2,4,6]
 
