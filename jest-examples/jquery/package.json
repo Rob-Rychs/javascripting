@@ -3,9 +3,7 @@
     "babel-preset-env": "*",
     "jest": "*"
   },
-  "dependencies": {
-    "jquery": "*"
-  },
+  "dependencies": {},
   "scripts": {
     "test": "jest"
   }
