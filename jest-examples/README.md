@@ -3,7 +3,7 @@
 #### 1. Install jest
 
 ```
-npm install
+yarn install
 ```
 
 #### 2. Move to example
@@ -12,14 +12,22 @@ npm install
 cd examples/jquery
 ```
 
-#### 3. Install example
+#### 3. Install example dependency
 
 ```
-npm install
+yarn install <new-test-dev-dependency> -D
 ```
 
-#### 4. Run example
+#### 4. Run example test
 
 ```
-npm test
+yarn test
 ```
+
+#### 4. Remove example dependency after running test
+
+```
+yarn remove <test-dependency>
+```
+
+checkout the original [jest repo]('https://github.com/facebook/jest') these examples belong to
