@@ -1,6 +1,6 @@
-
 function greetMe(yourName) {
-  alert('Hello ' + yourName);
+  return `Hello + ${yourName}`;
 }
+module.exports = greetMe;
 
-greetMe('Rob-Rychs');
+// greetMe('Rob-Rychs');

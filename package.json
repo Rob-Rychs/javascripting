@@ -1,0 +1,15 @@
+{
+  "name": "javascripting",
+  "version": "1.0.0",
+  "description": "My collection of learnings, notes and snippets on JS and other BS 🤘📄",
+  "main": "README.md",
+  "repository": "https://github.com/Rob-Rychs/javascripting.git",
+  "author": "Rob-Rychs <Robrychel@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^21.2.1"
+  },
+  "scripts": {
+    "test": "jest"
+  }
+}
