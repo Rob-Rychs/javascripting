@@ -1,3 +1,3 @@
-module.exports = function(input) {
+module.exports = function shout(input) {
   return input.toUpperCase()
 }

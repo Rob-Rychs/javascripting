@@ -7,9 +7,14 @@
   "author": "Rob-Rychs <Robrychel@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-jest": "^21.2.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
     "jest": "^21.2.1"
   },
   "scripts": {
     "test": "jest"
-  }
+  },
+  "dependencies": {}
 }

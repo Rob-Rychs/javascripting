@@ -1,7 +1,6 @@
-const { greetMe } = require ('./../greetMe.js');
+const  { greetMe } = require('./../greetMe.js');
 
-describe('greetMe()', () => {
-  test('properly returns', () => {
-    greetMe('Rob').expect.stringContaining('Hello');
-  });
+test('properly returns', () => {
+  expect(greetMe('Rob')).stringContaining('Hello');
 });
+
