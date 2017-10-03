@@ -8,3 +8,7 @@
 ```
 
 # A collection of notes and learnings on JS and other BS 🤘📄
+
+## Todo
+
+- refactor name-survey-example.js and add comments
