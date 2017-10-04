@@ -24,7 +24,7 @@ do{
   var guess = prompt("Guess a number between 1 and 20");
 }while(guess != 15)
 
-alert("You guessed 15!);
+alert("You guessed 15!");
 
 // For loop:
 

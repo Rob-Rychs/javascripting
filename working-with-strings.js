@@ -16,8 +16,8 @@
 
 .trim() // trims white space of string
 
-.toUpperCase() 
+.toUpperCase() // make string uppercase
 
-.toLowerCase() 
+.toLowerCase() // make string lowercase
 
-strToStyle.property() .big() .bold() .fontcolor("blue") .fontsize("8em") .italics() .link("url") .small() .strike() .sub() .sup()
+strToStyle.property() .big() .bold() .fontcolor("blue") .fontsize("8em") .italics() .link("url") .small() .strike() .sub() .sup() // style string 

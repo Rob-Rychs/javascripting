@@ -8,9 +8,9 @@
 
 .sort()
 
-numbers.sort(function(x,y){return x - y});
+numbers.sort(function(x,y){return x - y}); // the 
 
-.concat()
+.concat() // concatenates two strings together
 
 .pop() // removes last item of an array
 
