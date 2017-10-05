@@ -1,0 +1,1 @@
+> whoami // get user on host
