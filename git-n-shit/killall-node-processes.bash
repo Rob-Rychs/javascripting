@@ -1,0 +1,1 @@
+> killall -9 node // kills all node processes

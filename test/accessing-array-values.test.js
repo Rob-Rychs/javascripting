@@ -1,4 +1,4 @@
-const  food  = require('../accessing-array-values.js');
+import food from '../accessing-array-values.js'
 
 describe('food', () => {
   test('properly returns', () => {
