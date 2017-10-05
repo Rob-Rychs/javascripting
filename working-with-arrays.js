@@ -2,11 +2,13 @@
 
 .splice()
 
+.slice() 
+
 .valueOf()
 
 .join()
 
-.sort()
+.sort() 
 
 numbers.sort(function(x,y){return x - y}); // the 
 
