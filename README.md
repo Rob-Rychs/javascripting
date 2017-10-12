@@ -12,3 +12,7 @@
 ## Todo
 
 - refactor name-survey-example.js and add comments
+
+- review and write comments for each function
+
+- write tests for each function/ fix failing tests
