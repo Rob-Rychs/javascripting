@@ -16,3 +16,5 @@
 - review and write comments for each function
 
 - write tests for each function/ fix failing tests
+
+- finish thinking in react workshop
