@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Honda Civic",
+        "code": "FFERGT",
+        "cost": "$7.900",
+        "reatail": "$15.000",
+        "avail": "In stock"
+    },
+    {
+        "name": "Honda Fit",
+        "code": "TFTHRHR",
+        "cost": "$5.110",
+        "reatail": "$10.400",
+        "avail": "In stock"
+    },
+    {
+        "name": "BMW X6",
+        "code": "GHTSTS",
+        "cost": "$26.900",
+        "reatail": "$34.900",
+        "avail": "In stock"
+    },
+    {
+        "name": "Mercedes CL500",
+        "code": "ERDHRHH",
+        "cost": "$38.900",
+        "reatail": "$49.900",
+        "avail": "On back order"
+    }
+]
