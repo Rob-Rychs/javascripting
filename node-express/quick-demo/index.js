@@ -44,7 +44,7 @@ app.get('/quotes/:name', function(request, response) {
 app.post('/quotes', bodyParser.json(), (request, response) => {
   console.log(request.body);
   quotes.push(request.body);
-  res.status(200).end();
+  response.status(200).end();
 })
 
 
