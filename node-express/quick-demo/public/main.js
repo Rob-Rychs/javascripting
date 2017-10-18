@@ -3,22 +3,55 @@ document.addEventListener('DOMContentLoaded', init);
 function init() {
   const list = document.getElementById('list');
   const button = document.getElementById('myBtn');
+  const createQuoteForm = document.getElementById('create-quote');
 
-   button.addEventListener('click', async (e) => {
-     e.preventDefault();
-     const response = await fetch('http://localhost:3300/quotes');
-     const quotes = await response.json();
+  async function getQuotes(e) {
+    e && e.preventDefault();
+    const response = await fetch('http://localhost:3300/quotes');
+    const quotes = await response.json();
     
-     let listItems = '';
-     quotes.forEach((quote) => {
-       listItems += `<li>${quote.name} says: "${quote.text}"</li>`;
+   
+    let listItems = '';
+    quotes.forEach((quote) => {
+      listItems += `<li>${quote.name} says: "${quote.text}"</li>`;
+    });
+    // NEVER DO THIS!! BAD!! XSS
+    list.innerHTML = listItems;
+  }
+
+  async function addQuote(event) {
+    event && event.preventDefault();
+    const formData = new FormData(createQuoteForm);
+    const newQuote = {};
+    for ([key, value] of formData.entries()) {
+      newQuote[key] = value;
+    }
+
+    try {
+     await fetch('http://localhost:3300/quotes', {
+       method: 'post',
+       headers: {
+           'Content-Type': 'application/json'
+       },
+       body: JSON.stringify(newQuote)
      });
-     // NEVER DO THIS!! BAD!! XSS
-     list.innerHTML += listItems;
-   })
-}
+
+       // clear the form, reload the quotes list!
+       createQuoteForm.reset();
+       getQuotes();
+
+    } catch(e) {
+      console.log('Error creating the quoate.', e);
+    }
+    
+  }
+   getQuotes();
+   button.addEventListener('click', getQuotes);
+   createQuoteForm.addEventListener('submit', addQuote);
+  }
 })()
 
+// another way to fetch() the quotes 
 // const getData = async (url) => {
 //   try {
 //     const data = await fetch(`${url}/quotes`);

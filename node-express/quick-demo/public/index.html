@@ -5,12 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
-    
+    <style>
+      form { padding: 1rem; border: 1px solid;}
+      form input {
+        display: block;
+        width: 25%;
+        margin-bottom: 1rem;
+        border: 1px solid;
+      }
+    </style>
   </head>
   <body>
     Hello!
     <button id='myBtn'>Get Quotes</button>
     <ul id='list'></ul>
+    <h2>Submit a Quote 🚀</h2>
+    <form id="create-quote">
+      <label for="text">Quote Text</label>
+      <input type="text" id="text" name="text">
+      <label for="name">Speaker Name</label>
+      <input type="text" id="name" name="name">
+      <button type="submit">Create Quote</button>
+    </form>
     <script src=./main.js></script>
   </body>
 </html>
