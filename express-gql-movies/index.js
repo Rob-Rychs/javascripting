@@ -1,12 +1,11 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-const app = express();
-
 import { 
   graphqlExpress, 
   graphiqlExpress 
 } from 'apollo-server-express';
 import schema from './api/schema'; // Next step!
+const app = express();
 const GQL_PORT = process.env.PORT; // Where does this come from?
 // Where we will send all of our GraphQL requests
 app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
