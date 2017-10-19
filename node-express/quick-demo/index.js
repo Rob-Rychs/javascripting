@@ -1,10 +1,24 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import quotes from './quotes';
+import quoteRoutes from './quotes';
 import diyLogger from './lib/logger';
 const app = express();
 const port = 3300;
 
+let quotes = [
+  { 
+    name: 'Fred Brooks',
+    text: 'Nine people can’t make a baby in a month.'
+  },
+  { 
+    name: 'Paul Ford',
+    text: 'A computer is a clock with benefits.'
+  },
+  { 
+    name: 'Linus Torvalds',
+    text: 'Talk is cheap. Show me the code.'
+  }
+];
 
 app.use(diyLogger);
 
@@ -16,37 +30,6 @@ app.use((request, response, next) => {
 
 // express.static will serve a index.html file in the public directory
 app.use(express.static('public')); // this will overide the app.get('/', ...) below, beware that the order of these base url '/' requests matters!!!
-
-app.get('/', function(request, response) {
-  response.send('Hello, world!');
-}); 
-
-app.get('/quotes', function(request, response) {
-  response.send(quotes);
-});
-
-// remember to use %20 in url:author for spaces
-app.get('/quotes/:name', function(request, response) {
-  const { name } = request.params;
-  const slug = name.replace('-', ' ');
-
-  const quotesList = quotes.filter((quote) => {
-    return quote.name.toLowerCase() === slug.toLowerCase();
-  });
-
-  if (quotesList.length) {
-    response.send(quotesList);
-  } else {
-    response.status(404).send([{ error: `Author ${slug} not found...`}])
-  }
-});
-
-app.post('/quotes', bodyParser.json(), (request, response) => {
-  console.log(request.body);
-  quotes.push(request.body);
-  response.status(200).end();
-})
-
 
 // ...now run `curl -i` again
 app.listen(port, function() {
