@@ -8,7 +8,8 @@ import schema from './api/schema'; // Next step!
 
 const app = express();
 const port = 5000;
-const GQL_PORT = process.env.PORT; // Where does this come from? .env file or we can hardcode with port 
+const GQL_PORT = port;
+// process.env.PORT; // Where does this come from? .env file or we can hardcode with port 
 
 // Where we will send all of our GraphQL requests
 app.use('/graphql', bodyParser.json(), graphqlExpress({ schema }));
