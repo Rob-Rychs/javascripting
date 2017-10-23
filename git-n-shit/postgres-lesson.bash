@@ -1,4 +1,4 @@
-// only queries need the semi-colon
+// only SQL queries need the semi-colon at the end
 psql > start postrgres
 \? > help commands
 \h > more help
@@ -56,3 +56,13 @@ CREATE TABLE itemtags(itemid integer REFERENCES items (id), tagid integer REFERE
 ALTER TABLE tags ADD CONSTRAINT unique_title UNIQUE (title);
 // this is. acommented out command ALTER TABLE tags ADD PRIMARY KEY (tagid);
 
+// then add data into the db with INSERT, code below is kev\'s @mr-moto
+
+INSERT INTO items (title, description, imageurl, ownerid, created) VALUES
+    ('Miscellaneous Dishes', 'Eat off of real plates and bowls at your next dinner party. Adulting FTW.', 'https://firebasestorage.googleapis.com/v0/b/boomtown-dfdd8.appspot.com/o/demo-images%2Fmisc-dishes.jpg?alt=media', 'k721A4pRNggCx7b6ryEE8vx1VIi1', '2017-10-01 16:30:33.595884-07'),
+    ('Camp Stove', 'All you need to cook gourmet meals on your next trek into the wild.', 'https://firebasestorage.googleapis.com/v0/b/boomtown-dfdd8.appspot.com/o/demo-images%2Fcamp-stove.jpg?alt=media', 'Qdd5HoEin0OPxNUZcB5sDc7xGHD2', '2017-10-01 16:29:49.31706-07'),
+    ('Flute', 'Like-new flute to lend. Cmon, you know you want to play it...', 'https://firebasestorage.googleapis.com/v0/b/boomtown-dfdd8.appspot.com/o/demo-images%2Fflute.jpg?alt=media', 'eEvh1WUF5nb5eeUksUQb3Ph0kOU2', '2017-09-30 16:28:43.506291-07'),
+    ('Hatchet', 'Chop things down, show nature whos boss. But be safe—alcoholic beverage not included.', 'https://firebasestorage.googleapis.com/v0/b/boomtown-dfdd8.appspot.com/o/demo-images%2Fhatchet.jpg?alt=media', 'Qdd5HoEin0OPxNUZcB5sDc7xGHD2', '2017-09-29 16:28:24.616127-07');
+
+INSERT INTO tags (title) VALUES
+  ('Electronics'), ('Household Items'), ('Musical Instruments'), ('Physical Media'), ('Recreational Equipment'), ('Sporting Goods'), ('Tools');
