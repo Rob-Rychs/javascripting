@@ -1,3 +1,4 @@
+From https://www.tensorflow.org/install/install_mac
 Take the following steps to install TensorFlow with Virtualenv:
 
 Start a terminal (a shell). You\'ll perform all subsequent steps in this shell.
