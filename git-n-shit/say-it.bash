@@ -1,2 +1,2 @@
 say whatever you want
-node -e "child_process.execSync('say hello')"
+node -e "child_process.execSync('say hello world')"
