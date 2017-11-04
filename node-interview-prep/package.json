@@ -1,0 +1,23 @@
+{
+  "name": "node-interview-prep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "author": "Gareth",
+  "license": "ISC",
+  "dependencies": {
+    "highland": "^2.11.1",
+    "js-sdk": "github:retsly/js-sdk",
+    "lodash": "^4.17.4",
+    "ndarray": "^1.0.18",
+    "ramda": "^0.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.20",
+    "ava": "^0.22.0",
+    "babel-cli": "^6.26.0"
+  }
+}
