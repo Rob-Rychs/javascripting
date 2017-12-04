@@ -1,0 +1,1 @@
+Practice for writing best-practices JavaScript and TDD. Solution set for `npm i -g js-best-practices`
